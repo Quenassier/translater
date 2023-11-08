@@ -39,7 +39,7 @@ map<string, string> inputslovar() {
 
         }
         else {
-            cout << "такое слово уже существует пошел нахуй" << endl;
+            cout << "такое слово уже существует" << endl;
 
         }
     }
