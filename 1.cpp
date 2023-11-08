@@ -6,27 +6,23 @@ using namespace std;
 
 map<string, string> inputslovar() {
     ofstream outputFile("slova.txt");
-    if (outputFile.is_open()) {
-        cout << "файл открыт" << endl;
-
-    }
-    else {
-        cout << "файл не открыт" << endl;
-    }
     string translate;
     string word;
     map<string, string> slovar; 
 
     while (true) {
+    
 
         cout << "введите слово на русском" << endl;
+        cout << "введите exit для поиска слов в файле" << endl;
         cin >> word;
         if (word == "exit") {
+      
             outputFile.close();
 
             return slovar;
         }
-      
+
 
         cout << "введите перевод" << endl;
         cin >> translate;
@@ -53,14 +49,14 @@ void findword(map<string, string> slovar) {
     while (true) {
 
         cout << "введите слово" << endl;
-       
+
         cin >> word;
         if (word == "exit")
             return;
         for (auto& pair: slovar) {
             if (pair.first == word) {
                 cout << "перевод: " << pair.second << endl;
-           
+
             }
             if (pair.second == word) {
                 cout << "перевод: " << pair.first << endl;
